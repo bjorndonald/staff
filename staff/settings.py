@@ -80,6 +80,13 @@ DATABASES = {
     }
 }
 
+DATABASES = { 
+    'default': {      
+        'ENGINE': 'djongo',
+        'NAME': 'ucth-staff,
+    }
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

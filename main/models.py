@@ -20,13 +20,13 @@ class Staff(models.Model):
     def __str__(self):
         return self.staff_name
 
-class Qualification(models.Model):
-    qualification_name = models.CharField(max_length=800)
-    qualification_date = models.DateField()
+class Geopolitical_Zone(models.Model):
+    geopolitical_zone = models.CharField(max_length=800)
+
     class Meta:
-        verbose_name_plural = 'qualifications'
+        verbose_name_plural = 'Geopolitical zones'
     def __str__(self):
-        return self.qualification_name
+        return self.geopolitical_zone
 
 class State_Of_Origin(models.Model):
     state_name = models.CharField(max_length=800)
@@ -36,16 +36,19 @@ class State_Of_Origin(models.Model):
     def __str__(self):
         return self.state_name
 
-class Geopolitical_Zone(models.Model):
-    geopolitical_zone = models.CharField(max_length=800)
-
+class LGA(models.Model):
+    name = models.CharField(max_length=800)
+    state = models.ForeignKey(
+        State_Of_Origin, on_delete=models.CASCADE, verbose_name="State")
     class Meta:
-        verbose_name_plural = 'Geopolitical zones'
+        verbose_name_plural = 'Local Government Areas'
     def __str__(self):
-        return self.geopolitical_zone
+        return self.name  
 
 class Rank(models.Model):
     rank = models.CharField(max_length=800)
+    staff = models.ForeignKey(
+        Staff, on_delete=models.CASCADE, verbose_name="staff")
 
     class Meta:
         verbose_name_plural = 'Ranks'
@@ -90,27 +93,12 @@ class Salary_Structure(models.Model):
     def __str__(self):
         return self.salary_structure_name
 
-class Promotion(models.Model):
-    promotion_date = models.DateTimeField(auto_now_add=True)
-    grade_level = models.ForeignKey(
-        Grade_Level, on_delete=models.CASCADE, verbose_name="grade level")
-    staff = models.ForeignKey(
-        Staff, on_delete=models.CASCADE, verbose_name="staff")
-    step = models.ForeignKey(
-        Step, on_delete=models.CASCADE, verbose_name="step")
-    class Meta:
-        verbose_name_plural = 'Steps'
-    def __str__(self):
-        return self.promotion_date
-
 class Staff(models.Model):
     staff_name = models.CharField(max_length=800)
     date_of_birth=models.DateTimeField(auto_now_add=True)
     date_of_first_appointment=models.DateField(max_length=800)
     phone_no = models.CharField(max_length=800)
     file_no = models.PositiveSmallIntegerField(validators=[MinValueValidator(0)],blank=True,null=True,default=0)
-    qualification = models.ForeignKey(
-        Qualification, on_delete=models.CASCADE, verbose_name="qualification")
     salary_structure = models.ForeignKey(
         Qualification, on_delete=models.CASCADE, verbose_name="salary structure")
     confirmation_date = models.DateTimeField(auto_now_add=True)
@@ -132,3 +120,47 @@ class Staff(models.Model):
         verbose_name_plural = 'staff'
     def __str__(self):
         return self.staff_name
+
+class Qualification(models.Model):
+    qualification_name = models.CharField(max_length=800)
+    qualification_date = models.DateField()
+    staff = models.ForeignKey(
+        Staff, on_delete=models.CASCADE, verbose_name="staff")
+    class Meta:
+        verbose_name_plural = 'qualifications'
+    def __str__(self):
+        return self.qualification_name
+
+class Promotion(models.Model):
+    promotion_date = models.DateTimeField(auto_now_add=True)
+    grade_level = models.ForeignKey(
+        Grade_Level, on_delete=models.CASCADE, verbose_name="grade level")
+    staff = models.ForeignKey(
+        Staff, on_delete=models.CASCADE, verbose_name="staff")
+    step = models.ForeignKey(
+        Step, on_delete=models.CASCADE, verbose_name="step")
+    class Meta:
+        verbose_name_plural = 'Steps'
+    def __str__(self):
+        return self.promotion_date
+
+class Department(models.Model):
+    name = models.CharField(max_length=800)
+
+    class Meta:
+        verbose_name_plural = 'Departments'
+    def __str__(self):
+        return self.name
+
+class Posting(models.Model):
+    staff = models.ForeignKey(
+        Staff, on_delete=models.CASCADE, verbose_name="staff")
+    department = models.ForeignKey(
+        Department, on_delete=models.CASCADE, verbose_name="department")
+    start_date = models.DateTimeField(auto_now_add=True)
+    end_date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'Postings'
+    def __str__(self):
+        return self.staff.staff_name

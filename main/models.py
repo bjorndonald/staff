@@ -4,22 +4,6 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.contrib.auth.models import User
 
-class Staff(models.Model):
-    staff_name = models.CharField(max_length=800)
-    date_of_birth=models.DateField(max_length=800)
-    date_of_first_appointment=models.DateField(max_length=800)
-    phone_no = models.CharField(max_length=800)
-    file_no = models.IntegerField()
-    qualification = models.ForeignKey(
-        Qualification, on_delete=models.CASCADE, verbose_name="qualification")
-    salary_structure = models.ForeignKey(
-        Qualification, on_delete=models.CASCADE, verbose_name="salary structure")
-
-    class Meta:
-        verbose_name_plural = 'staff'
-    def __str__(self):
-        return self.staff_name
-
 class Qualification(models.Model):
     qualification_name = models.CharField(max_length=800)
     qualification_date = models.DateField()

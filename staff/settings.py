@@ -80,12 +80,12 @@ DATABASES = {
     }
 }
 
-DATABASES = { 
-    'default': {      
-        'ENGINE': 'djongo',
-        'NAME': 'ucth-staff,
-    }
-}
+# DATABASES = { 
+#     'default': {      
+#         'ENGINE': 'djongo',
+#         'NAME': 'ucth_staff'
+#     }
+# }
 
 
 # Password validation

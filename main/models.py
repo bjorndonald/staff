@@ -4,6 +4,22 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.contrib.auth.models import User
 
+class Staff(models.Model):
+    staff_name = models.CharField(max_length=800)
+    date_of_birth=models.DateField(max_length=800)
+    date_of_first_appointment=models.DateField(max_length=800)
+    phone_no = models.CharField(max_length=800)
+    file_no = models.IntegerField()
+    qualification = models.ForeignKey(
+        Qualification, on_delete=models.CASCADE, verbose_name="qualification")
+    salary_structure = models.ForeignKey(
+        Qualification, on_delete=models.CASCADE, verbose_name="salary structure")
+
+    class Meta:
+        verbose_name_plural = 'staff'
+    def __str__(self):
+        return self.staff_name
+
 class Qualification(models.Model):
     qualification_name = models.CharField(max_length=800)
     qualification_date = models.DateField()
@@ -43,6 +59,20 @@ class Step(models.Model):
         verbose_name_plural = 'Steps'
     def __str__(self):
         return self.step
+
+#Add  model for location
+#Leave  model
+#Leave status
+#Leave date
+#Leave message
+#Leave created_at and updated_at
+
+class Leave(models.Model):
+    status = models.BooleanField(default=False)
+    date = models.DateTimeField(auto_now_add=True)
+    message = models.CharField(max_length=200)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now_add=True)
 
 class Grade_Level(models.Model):
     grade_level_name = models.CharField(max_length=800)
@@ -84,8 +114,8 @@ class Staff(models.Model):
     salary_structure = models.ForeignKey(
         Qualification, on_delete=models.CASCADE, verbose_name="salary structure")
     confirmation_date = models.DateTimeField(auto_now_add=True)
-    promotion = models.ForeignKey(
-        Promotion, on_delete=models.CASCADE, verbose_name="promotion")
+    # promotion = models.ForeignKey(
+    #     Promotion, on_delete=models.CASCADE, verbose_name="promotion")
     state = models.ForeignKey(
         State_Of_Origin, on_delete=models.CASCADE, verbose_name="state of origin")
     step = models.ForeignKey(

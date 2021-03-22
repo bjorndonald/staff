@@ -4,21 +4,21 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.contrib.auth.models import User
 
-class Staff(models.Model):
-    staff_name = models.CharField(max_length=800)
-    date_of_birth=models.DateField(max_length=800)
-    date_of_first_appointment=models.DateField(max_length=800)
-    phone_no = models.CharField(max_length=800)
-    file_no = models.IntegerField()
-    qualification = models.ForeignKey(
-        Qualification, on_delete=models.CASCADE, verbose_name="qualification")
-    salary_structure = models.ForeignKey(
-        Qualification, on_delete=models.CASCADE, verbose_name="salary structure")
+# class Staff(models.Model):
+#     staff_name = models.CharField(max_length=800)
+#     date_of_birth=models.DateField(max_length=800)
+#     date_of_first_appointment=models.DateField(max_length=800)
+#     phone_no = models.CharField(max_length=800)
+#     file_no = models.IntegerField()
+#     qualification = models.ForeignKey(
+#         Qualification, on_delete=models.CASCADE, verbose_name="qualification")
+#     salary_structure = models.ForeignKey(
+#         Qualification, on_delete=models.CASCADE, verbose_name="salary structure")
 
-    class Meta:
-        verbose_name_plural = 'staff'
-    def __str__(self):
-        return self.staff_name
+#     class Meta:
+#         verbose_name_plural = 'staff'
+#     def __str__(self):
+#         return self.staff_name
 
 class Geopolitical_Zone(models.Model):
     geopolitical_zone = models.CharField(max_length=800)
@@ -47,8 +47,8 @@ class LGA(models.Model):
 
 class Rank(models.Model):
     rank = models.CharField(max_length=800)
-    staff = models.ForeignKey(
-        Staff, on_delete=models.CASCADE, verbose_name="staff")
+    # staff = models.ForeignKey(
+    #     Staff, on_delete=models.CASCADE, verbose_name="staff")
 
     class Meta:
         verbose_name_plural = 'Ranks'
@@ -99,13 +99,13 @@ class Staff(models.Model):
     date_of_first_appointment=models.DateField(max_length=800)
     phone_no = models.CharField(max_length=800)
     file_no = models.PositiveSmallIntegerField(validators=[MinValueValidator(0)],blank=True,null=True,default=0)
-    salary_structure = models.ForeignKey(
-        Qualification, on_delete=models.CASCADE, verbose_name="salary structure")
+    # salary_structure = models.ForeignKey(
+    #     Qualification, on_delete=models.CASCADE, verbose_name="salary structure")
     confirmation_date = models.DateTimeField(auto_now_add=True)
     # promotion = models.ForeignKey(
     #     Promotion, on_delete=models.CASCADE, verbose_name="promotion")
     state = models.ForeignKey(
-        State_Of_Origin, on_delete=models.CASCADE, verbose_name="state of origin")
+        State_Of_Origin, on_delete=models.CASCADE, verbose_name="state of origin", )
     step = models.ForeignKey(
         Step, on_delete=models.CASCADE, verbose_name="step")
     grade_level = models.ForeignKey(

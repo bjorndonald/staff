@@ -93,13 +93,13 @@
             <a class=" nav-link {% if 'index' in segment %} active {% endif %}" href="/"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
             </a>
           </li>
-          <li class="nav-item" id="headingOne">
-            <a style="cursor:pointer" class=" nav-link {% if 'index' in segment %} active {% endif %}" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> 
+          <li class="nav-item" id="staff-nav">
+            <a style="cursor:pointer" class=" nav-link {% if 'index' in segment %} active {% endif %}" data-toggle="collapse" data-target="#staff-collapse" aria-expanded="true" aria-controls="staff-collapse"> 
               <i class="ni ni-tv-2 text-primary"></i> 
               Staff directory
             </a>
           </li>
-          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div id="staff-collapse" class="collapse" aria-labelledby="staff-nav" data-parent="#accordion">
             <li class="nav-item">
               <a class=" nav-link {% if 'index' in segment %} active {% endif %}" > 
                 <i class="ni ni-tv-2 text-primary"></i> 
@@ -114,6 +114,29 @@
               </a>
             </li>
           </div>
+
+          <li class="nav-item" id="promotions-nav">
+            <a style="cursor:pointer" class=" nav-link {% if 'index' in segment %} active {% endif %}" data-toggle="collapse" data-target="#promotions-collapse" aria-expanded="true" aria-controls="promotions-collapse"> 
+              <i class="ni ni-tv-2 text-primary"></i> 
+              Promotion directory
+            </a>
+          </li>
+          <div id="promotions-collapse" class="collapse" aria-labelledby="promotions-nav" data-parent="#accordion">
+            <li class="nav-item">
+              <a class=" nav-link {% if 'index' in segment %} active {% endif %}" > 
+                <i class="ni ni-tv-2 text-primary"></i> 
+                Add new promotion
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="{% url 'promotionlist' %}" class=" nav-link {% if 'index' in segment %} active {% endif %}" > 
+                <i class="ni ni-tv-2 text-primary"></i> 
+                Promotion list
+              </a>
+            </li>
+          </div>
+          
         </ul>
       </div>
     </div>

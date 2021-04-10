@@ -1,0 +1,70 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Add Staff {% endblock title %}
+
+{% block content %}
+
+<!-- Header -->
+<div class="header pb-1 pt-1 pt-lg-1 d-flex align-items-center"
+  style="min-height: 200px; background-image: url(/static/assets/img/staff/doctors.png); background-size: cover; background-position: center top;">
+  <!-- Mask -->
+  <span class="mask bg-gradient-default opacity-8"></span>
+  <!-- Header container -->
+</div>
+
+<div class="container-fluid mt--7">
+  <div class="col-xl-12 order-xl-1">
+    <div class="card bg-secondary shadow">
+      <div class="card-header bg-white border-0">
+        <div class="row align-items-center">
+          <div class="col-8">
+            <h3 class="mb-0">New leave application</h3>
+          </div>
+          
+        </div>
+      </div>
+      <div class="card-body">
+        <form method="POST">
+          {% csrf_token %}
+          <!-- <h6 class="heading-small text-muted mb-4">Personal information</h6> -->
+          <div >
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label" for="status">Status</label>
+                  <!-- <input type="text" id="input-first-name" class="form-control form-control-alternative"> -->
+                  {{form.status}}
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label" for="input-dob">Leave Date</label>
+                  <!-- <input type="text" id="input-last-name" class="form-control form-control-alternative"> -->
+                  {{form.date}}
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group focused">
+                  <label class="form-control-label" for="message">Message</label>
+                  <!-- <input id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text"> -->
+                  {{form.message}}
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "includes/footer.html" %}
+</div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE -->
+{% block javascripts %}{% endblock javascripts %}

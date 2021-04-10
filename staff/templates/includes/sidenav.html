@@ -94,21 +94,21 @@
             </a>
           </li>
           <li class="nav-item" id="staff-nav">
-            <a style="cursor:pointer" class=" nav-link {% if 'index' in segment %} active {% endif %}" data-toggle="collapse" data-target="#staff-collapse" aria-expanded="true" aria-controls="staff-collapse"> 
+            <a style="cursor:pointer" class=" nav-link {% if 'addstaff' in segment %} active {% endif %} {% if 'stafflist' in segment %} active {% endif %}" data-toggle="collapse" data-target="#staff-collapse" aria-expanded="true" aria-controls="staff-collapse"> 
               <i class="ni ni-tv-2 text-primary"></i> 
               Staff directory
             </a>
           </li>
-          <div id="staff-collapse" class="collapse" aria-labelledby="staff-nav" data-parent="#accordion">
+          <div id="staff-collapse" style="margin-left: 1rem; background-color: #f9f9f9;" class="collapse" aria-labelledby="staff-nav" data-parent="#accordion">
             <li class="nav-item">
-              <a class=" nav-link {% if 'index' in segment %} active {% endif %}" > 
+              <a href="{% url 'addstaff' %}" class=" nav-link {% if 'addstaff' in segment %} active {% endif %}" > 
                 <i class="ni ni-tv-2 text-primary"></i> 
                 Add new staff
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="{% url 'stafflist' %}" class=" nav-link {% if 'index' in segment %} active {% endif %}" > 
+              <a href="{% url 'stafflist' %}" class=" nav-link {% if 'stafflist' in segment %} active {% endif %}" > 
                 <i class="ni ni-tv-2 text-primary"></i> 
                 Staff list
               </a>
@@ -116,27 +116,70 @@
           </div>
 
           <li class="nav-item" id="promotions-nav">
-            <a style="cursor:pointer" class=" nav-link {% if 'index' in segment %} active {% endif %}" data-toggle="collapse" data-target="#promotions-collapse" aria-expanded="true" aria-controls="promotions-collapse"> 
+            <a style="cursor:pointer" class=" nav-link {% if 'addpromotion' in segment %} active {% endif %} {% if 'promotionlist' in segment %} active {% endif %}" data-toggle="collapse" data-target="#promotions-collapse" aria-expanded="true" aria-controls="promotions-collapse"> 
               <i class="ni ni-tv-2 text-primary"></i> 
               Promotion directory
             </a>
           </li>
-          <div id="promotions-collapse" class="collapse" aria-labelledby="promotions-nav" data-parent="#accordion">
+          <div id="promotions-collapse" style="margin-left: 1rem; background-color: #f9f9f9;" class="collapse" aria-labelledby="promotions-nav" data-parent="#accordion">
             <li class="nav-item">
-              <a class=" nav-link {% if 'index' in segment %} active {% endif %}" > 
+              <a href="{% url 'addpromotion' %}" class=" nav-link {% if 'addpromotion' in segment %} active {% endif %}" > 
                 <i class="ni ni-tv-2 text-primary"></i> 
                 Add new promotion
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="{% url 'promotionlist' %}" class=" nav-link {% if 'index' in segment %} active {% endif %}" > 
+              <a href="{% url 'promotionlist' %}" class=" nav-link {% if 'promotionlist' in segment %} active {% endif %}" > 
                 <i class="ni ni-tv-2 text-primary"></i> 
                 Promotion list
               </a>
             </li>
           </div>
           
+          <li class="nav-item" id="leaves-nav">
+            <a style="cursor:pointer" class=" nav-link {% if 'addleave' in segment %} active {% endif %} {% if 'leavelist' in segment %} active {% endif %}" data-toggle="collapse" data-target="#leaves-collapse" aria-expanded="true" aria-controls="leaves-collapse"> 
+              <i class="ni ni-tv-2 text-primary"></i> 
+              Leave directory
+            </a>
+          </li>
+          <div id="leaves-collapse" style="margin-left: 1rem; background-color: #f9f9f9;" class="collapse" aria-labelledby="leaves-nav" data-parent="#accordion">
+            <li class="nav-item">
+              <a href="{% url 'addleave' %}" class=" nav-link {% if 'addleave' in segment %} active {% endif %}" > 
+                <i class="ni ni-tv-2 text-primary"></i> 
+                Add new leave
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="{% url 'leavelist' %}" class=" nav-link {% if 'leavelist' in segment %} active {% endif %}" > 
+                <i class="ni ni-tv-2 text-primary"></i> 
+                Leave list
+              </a>
+            </li>
+          </div>
+
+          <li class="nav-item" id="postings-nav">
+            <a style="cursor:pointer" class=" nav-link {% if 'addposting' in segment %} active {% endif %} {% if 'postinglist' in segment %} active {% endif %}" data-toggle="collapse" data-target="#postings-collapse" aria-expanded="true" aria-controls="postings-collapse"> 
+              <i class="ni ni-tv-2 text-primary"></i> 
+              Posting directory
+            </a>
+          </li>
+          <div id="postings-collapse" style="margin-left: 1rem; background-color: #f9f9f9;" class="collapse" aria-labelledby="postings-nav" data-parent="#accordion">
+            <li class="nav-item">
+              <a href="{% url 'addposting' %}" class=" nav-link {% if 'addposting' in segment %} active {% endif %}" > 
+                <i class="ni ni-tv-2 text-primary"></i> 
+                Add new posting
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="{% url 'postinglist' %}" class=" nav-link {% if 'postinglist' in segment %} active {% endif %}" > 
+                <i class="ni ni-tv-2 text-primary"></i> 
+                Posting list
+              </a>
+            </li>
+          </div>
         </ul>
       </div>
     </div>

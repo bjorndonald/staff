@@ -76,6 +76,90 @@ class QualificationForm(forms.ModelForm):
         for visible in self.visible_fields():
             visible.field.widget.attrs['class'] = 'form-control'
 
+class Geopolitical_ZoneForm(forms.ModelForm):
+    geopolitical_zone = forms.CharField(label="Geopolitical Zone")
+
+    class Meta:
+        model = Geopolitical_Zone
+        fields = ['geopolitical_zone']
+
+    def __init__(self, *args, **kwargs):
+        super(Geopolitical_ZoneForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+
+class Grade_LevelForm(forms.ModelForm):
+    grade_level_name = forms.CharField(label="Geopolitical Zone")
+
+    class Meta:
+        model = Grade_Level
+        fields = ['grade_level_name']
+
+    def __init__(self, *args, **kwargs):
+        super(Grade_LevelForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+
+class Salary_StructureForm(forms.ModelForm):
+    salary_structure_name = forms.CharField(label="Salary Structure")
+
+    class Meta:
+        model = Salary_Structure
+        fields = ['salary_structure_name']
+
+    def __init__(self, *args, **kwargs):
+        super(Salary_StructureForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+
+class State_Of_OriginForm(forms.ModelForm):
+    state_name = forms.CharField(label="State of Origin")
+
+    class Meta:
+        model = State_Of_Origin
+        fields = ['state_name']
+
+    def __init__(self, *args, **kwargs):
+        super(State_Of_OriginForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+
+class LeaveTypeForm(forms.ModelForm):
+    name = forms.CharField(label="Leave Type")
+
+    class Meta:
+        model = LeaveType
+        fields = ['name']
+
+    def __init__(self, *args, **kwargs):
+        super(LeaveTypeForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+
+class TerminalTypeForm(forms.ModelForm):
+    name = forms.CharField(label="Terminal Type")
+
+    class Meta:
+        model = TerminalType
+        fields = ['name']
+
+    def __init__(self, *args, **kwargs):
+        super(TerminalTypeForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+
+class DepartmentForm(forms.ModelForm):
+    name = forms.CharField(label="Department Name")
+
+    class Meta:
+        model = Department
+        fields = ['name']
+
+    def __init__(self, *args, **kwargs):
+        super(DepartmentForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+
 class PromotionForm(forms.ModelForm):
     promotion_date = forms.DateField(label="Promotion Date", widget=forms.DateInput(attrs={'type':'date'}))
     grade_level = forms.ModelChoiceField(queryset=Grade_Level.objects.all())

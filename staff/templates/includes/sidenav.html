@@ -1,186 +1,368 @@
-
-  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
-    <div class="container-fluid">
-      <!-- Toggler -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Brand -->
-      <a class="navbar-brand pt-0" href="/">
-        <!-- <img src="/static/assets/img/brand/blue.png" class="navbar-brand-img" alt="..."> -->
-      </a>
-      <!-- User -->
-      <ul class="nav align-items-center d-md-none">
-        <li class="nav-item dropdown">
-          <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="ni ni-bell-55"></i>
-          </a>
-          <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+<nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+  <div class="container-fluid">
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main"
+      aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Brand -->
+    <a class="navbar-brand pt-0" href="/">
+      <!-- <img src="/static/assets/img/brand/blue.png" class="navbar-brand-img" alt="..."> -->
+    </a>
+    <!-- User -->
+    <ul class="nav align-items-center d-md-none">
+      <li class="nav-item dropdown">
+        <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <i class="ni ni-bell-55"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="media align-items-center">
+            <span class="avatar avatar-sm rounded-circle">
+              <img alt="Image placeholder" src="/static/assets/img/theme/team-1-800x800.jpg">
+            </span>
           </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <div class="media align-items-center">
-              <span class="avatar avatar-sm rounded-circle">
-                <img alt="Image placeholder" src="/static/assets/img/theme/team-1-800x800.jpg">
-              </span>
-            </div>
+        </a>
+        <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+          <div class=" dropdown-header noti-title">
+            <h6 class="text-overflow m-0">Welcome!</h6>
+          </div>
+          <a href="/profile.html" class="dropdown-item">
+            <i class="ni ni-single-02"></i>
+            <span>My profile</span>
           </a>
-          <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-            <div class=" dropdown-header noti-title">
-              <h6 class="text-overflow m-0">Welcome!</h6>
-            </div>
-            <a href="/profile.html" class="dropdown-item">
-              <i class="ni ni-single-02"></i>
-              <span>My profile</span>
-            </a>
-            <a href="/profile.html" class="dropdown-item">
-              <i class="ni ni-settings-gear-65"></i>
-              <span>Settings</span>
-            </a>
-            <a href="/profile.html" class="dropdown-item">
-              <i class="ni ni-calendar-grid-58"></i>
-              <span>Activity</span>
-            </a>
-            <a href="/profile.html" class="dropdown-item">
-              <i class="ni ni-support-16"></i>
-              <span>Support</span>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="" class="dropdown-item">
-              <i class="ni ni-user-run"></i>
-              <span>Logout</span>
+          <a href="/profile.html" class="dropdown-item">
+            <i class="ni ni-settings-gear-65"></i>
+            <span>Settings</span>
+          </a>
+          <a href="/profile.html" class="dropdown-item">
+            <i class="ni ni-calendar-grid-58"></i>
+            <span>Activity</span>
+          </a>
+          <a href="/profile.html" class="dropdown-item">
+            <i class="ni ni-support-16"></i>
+            <span>Support</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="" class="dropdown-item">
+            <i class="ni ni-user-run"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </li>
+    </ul>
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+      <!-- Collapse header -->
+      <div class="navbar-collapse-header d-md-none">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a href="./index.html">
+              <img src="/static/assets/img/brand/blue.png">
             </a>
           </div>
-        </li>
-      </ul>
-      <!-- Collapse -->
-      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
-        <!-- Collapse header -->
-        <div class="navbar-collapse-header d-md-none">
-          <div class="row">
-            <div class="col-6 collapse-brand">
-              <a href="./index.html">
-                <img src="/static/assets/img/brand/blue.png">
-              </a>
-            </div>
-            <div class="col-6 collapse-close">
-              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
-                <span></span>
-                <span></span>
-              </button>
+          <div class="col-6 collapse-close">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main"
+              aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Form -->
+      <form class="mt-4 mb-3 d-md-none">
+        <div class="input-group input-group-rounded input-group-merge">
+          <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search"
+            aria-label="Search">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <span class="fa fa-search"></span>
             </div>
           </div>
         </div>
-        <!-- Form -->
-        <form class="mt-4 mb-3 d-md-none">
-          <div class="input-group input-group-rounded input-group-merge">
-            <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <span class="fa fa-search"></span>
-              </div>
-            </div>
-          </div>
-        </form>
-        <!-- Navigation -->
-        <ul class="navbar-nav" id="accordion">
+      </form>
+      <!-- Navigation -->
+      <ul class="navbar-nav" id="accordion">
+        <li class="nav-item">
+          <a class=" nav-link {% if 'index' in segment %} active {% endif %}" href="/"> <i
+              class="ni ni-tv-2 text-primary"></i> Dashboard
+          </a>
+        </li>
+        <li class="nav-item" id="staff-nav">
+          <a style="cursor:pointer"
+            class=" nav-link {% if 'addstaff' in segment %} active {% endif %} {% if 'stafflist' in segment %} active {% endif %}"
+            data-toggle="collapse" data-target="#staff-collapse" aria-expanded="true" aria-controls="staff-collapse">
+            <i class="ni ni-tv-2 text-primary"></i>
+            Staff directory
+          </a>
+        </li>
+        <div id="staff-collapse" style="margin-left: 1rem; background-color: #f9f9f9;" class="collapse"
+          aria-labelledby="staff-nav" data-parent="#accordion">
           <li class="nav-item">
-            <a class=" nav-link {% if 'index' in segment %} active {% endif %}" href="/"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
+            <a href="{% url 'addstaff' %}" class=" nav-link {% if 'addstaff' in segment %} active {% endif %}">
+              <i class="ni ni-tv-2 text-primary"></i>
+              Add new staff
             </a>
           </li>
-          <li class="nav-item" id="staff-nav">
-            <a style="cursor:pointer" class=" nav-link {% if 'addstaff' in segment %} active {% endif %} {% if 'stafflist' in segment %} active {% endif %}" data-toggle="collapse" data-target="#staff-collapse" aria-expanded="true" aria-controls="staff-collapse"> 
-              <i class="ni ni-tv-2 text-primary"></i> 
-              Staff directory
+
+          <li class="nav-item">
+            <a href="{% url 'stafflist' %}" class=" nav-link {% if 'stafflist' in segment %} active {% endif %}">
+              <i class="ni ni-tv-2 text-primary"></i>
+              Staff list
             </a>
           </li>
-          <div id="staff-collapse" style="margin-left: 1rem; background-color: #f9f9f9;" class="collapse" aria-labelledby="staff-nav" data-parent="#accordion">
-            <li class="nav-item">
-              <a href="{% url 'addstaff' %}" class=" nav-link {% if 'addstaff' in segment %} active {% endif %}" > 
-                <i class="ni ni-tv-2 text-primary"></i> 
-                Add new staff
-              </a>
-            </li>
+        </div>
 
-            <li class="nav-item">
-              <a href="{% url 'stafflist' %}" class=" nav-link {% if 'stafflist' in segment %} active {% endif %}" > 
-                <i class="ni ni-tv-2 text-primary"></i> 
-                Staff list
-              </a>
-            </li>
-          </div>
-
-          <li class="nav-item" id="promotions-nav">
-            <a style="cursor:pointer" class=" nav-link {% if 'addpromotion' in segment %} active {% endif %} {% if 'promotionlist' in segment %} active {% endif %}" data-toggle="collapse" data-target="#promotions-collapse" aria-expanded="true" aria-controls="promotions-collapse"> 
-              <i class="ni ni-tv-2 text-primary"></i> 
-              Promotion directory
+        <li class="nav-item" id="promotions-nav">
+          <a style="cursor:pointer"
+            class=" nav-link {% if 'addpromotion' in segment %} active {% endif %} {% if 'promotionlist' in segment %} active {% endif %}"
+            data-toggle="collapse" data-target="#promotions-collapse" aria-expanded="true"
+            aria-controls="promotions-collapse">
+            <i class="ni ni-tv-2 text-primary"></i>
+            Promotion directory
+          </a>
+        </li>
+        <div id="promotions-collapse" style="margin-left: 1rem; background-color: #f9f9f9;" class="collapse"
+          aria-labelledby="promotions-nav" data-parent="#accordion">
+          <li class="nav-item">
+            <a href="{% url 'addpromotion' %}" class=" nav-link {% if 'addpromotion' in segment %} active {% endif %}">
+              <i class="ni ni-tv-2 text-primary"></i>
+              Add new promotion
             </a>
           </li>
-          <div id="promotions-collapse" style="margin-left: 1rem; background-color: #f9f9f9;" class="collapse" aria-labelledby="promotions-nav" data-parent="#accordion">
-            <li class="nav-item">
-              <a href="{% url 'addpromotion' %}" class=" nav-link {% if 'addpromotion' in segment %} active {% endif %}" > 
-                <i class="ni ni-tv-2 text-primary"></i> 
-                Add new promotion
-              </a>
-            </li>
 
-            <li class="nav-item">
-              <a href="{% url 'promotionlist' %}" class=" nav-link {% if 'promotionlist' in segment %} active {% endif %}" > 
-                <i class="ni ni-tv-2 text-primary"></i> 
-                Promotion list
-              </a>
-            </li>
-          </div>
-          
-          <li class="nav-item" id="leaves-nav">
-            <a style="cursor:pointer" class=" nav-link {% if 'addleave' in segment %} active {% endif %} {% if 'leavelist' in segment %} active {% endif %}" data-toggle="collapse" data-target="#leaves-collapse" aria-expanded="true" aria-controls="leaves-collapse"> 
-              <i class="ni ni-tv-2 text-primary"></i> 
-              Leave directory
+          <li class="nav-item">
+            <a href="{% url 'promotionlist' %}"
+              class=" nav-link {% if 'promotionlist' in segment %} active {% endif %}">
+              <i class="ni ni-tv-2 text-primary"></i>
+              Promotion list
             </a>
           </li>
-          <div id="leaves-collapse" style="margin-left: 1rem; background-color: #f9f9f9;" class="collapse" aria-labelledby="leaves-nav" data-parent="#accordion">
-            <li class="nav-item">
-              <a href="{% url 'addleave' %}" class=" nav-link {% if 'addleave' in segment %} active {% endif %}" > 
-                <i class="ni ni-tv-2 text-primary"></i> 
-                Add new leave
-              </a>
-            </li>
+        </div>
 
-            <li class="nav-item">
-              <a href="{% url 'leavelist' %}" class=" nav-link {% if 'leavelist' in segment %} active {% endif %}" > 
-                <i class="ni ni-tv-2 text-primary"></i> 
-                Leave list
-              </a>
-            </li>
-          </div>
-
-          <li class="nav-item" id="postings-nav">
-            <a style="cursor:pointer" class=" nav-link {% if 'addposting' in segment %} active {% endif %} {% if 'postinglist' in segment %} active {% endif %}" data-toggle="collapse" data-target="#postings-collapse" aria-expanded="true" aria-controls="postings-collapse"> 
-              <i class="ni ni-tv-2 text-primary"></i> 
-              Posting directory
+        <li class="nav-item" id="leaves-nav">
+          <a style="cursor:pointer"
+            class=" nav-link {% if 'addleave' in segment %} active {% endif %} {% if 'leavelist' in segment %} active {% endif %}"
+            data-toggle="collapse" data-target="#leaves-collapse" aria-expanded="true" aria-controls="leaves-collapse">
+            <i class="ni ni-tv-2 text-primary"></i>
+            Leave directory
+          </a>
+        </li>
+        <div id="leaves-collapse" style="margin-left: 1rem; background-color: #f9f9f9;" class="collapse"
+          aria-labelledby="leaves-nav" data-parent="#accordion">
+          <li class="nav-item">
+            <a href="{% url 'addleave' %}" class=" nav-link {% if 'addleave' in segment %} active {% endif %}">
+              <i class="ni ni-tv-2 text-primary"></i>
+              Add new leave
             </a>
           </li>
-          <div id="postings-collapse" style="margin-left: 1rem; background-color: #f9f9f9;" class="collapse" aria-labelledby="postings-nav" data-parent="#accordion">
+
+          <li class="nav-item">
+            <a href="{% url 'leavelist' %}" class=" nav-link {% if 'leavelist' in segment %} active {% endif %}">
+              <i class="ni ni-tv-2 text-primary"></i>
+              Leave list
+            </a>
+          </li>
+        </div>
+
+        <li class="nav-item" id="postings-nav">
+          <a style="cursor:pointer"
+            class=" nav-link {% if 'addposting' in segment %} active {% endif %} {% if 'postinglist' in segment %} active {% endif %}"
+            data-toggle="collapse" data-target="#postings-collapse" aria-expanded="true"
+            aria-controls="postings-collapse">
+            <i class="ni ni-tv-2 text-primary"></i>
+            Posting directory
+          </a>
+        </li>
+        <div id="postings-collapse" style="margin-left: 1rem; background-color: #f9f9f9;" class="collapse"
+          aria-labelledby="postings-nav" data-parent="#accordion">
+          <li class="nav-item">
+            <a href="{% url 'addposting' %}" class=" nav-link {% if 'addposting' in segment %} active {% endif %}">
+              <i class="ni ni-tv-2 text-primary"></i>
+              Add new posting
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{% url 'postinglist' %}" class=" nav-link {% if 'postinglist' in segment %} active {% endif %}">
+              <i class="ni ni-tv-2 text-primary"></i>
+              Posting list
+            </a>
+          </li>
+
+          <li class="nav-item" id="geopolitical_zones-nav">
+            <a style="cursor:pointer"
+              class=" nav-link {% if 'addgeopolitical_zone' in segment %} active {% endif %} {% if 'geopolitical_zonelist' in segment %} active {% endif %}"
+              data-toggle="collapse" data-target="#geopolitical_zones-collapse" aria-expanded="true"
+              aria-controls="geopolitical_zones-collapse">
+              <i class="ni ni-tv-2 text-primary"></i>
+              Geopolitical zone directory
+            </a>
+          </li>
+          <div id="geopolitical_zones-collapse" style="margin-left: 1rem; background-color: #f9f9f9;" class="collapse"
+            aria-labelledby="geopolitical_zones-nav" data-parent="#accordion">
             <li class="nav-item">
-              <a href="{% url 'addposting' %}" class=" nav-link {% if 'addposting' in segment %} active {% endif %}" > 
-                <i class="ni ni-tv-2 text-primary"></i> 
-                Add new posting
+              <a href="{% url 'addgeopolitical_zone' %}"
+                class=" nav-link {% if 'addgeopolitical_zone' in segment %} active {% endif %}">
+                <i class="ni ni-tv-2 text-primary"></i>
+                Add new geopolitical zone
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="{% url 'postinglist' %}" class=" nav-link {% if 'postinglist' in segment %} active {% endif %}" > 
-                <i class="ni ni-tv-2 text-primary"></i> 
-                Posting list
+              <a href="{% url 'geopolitical_zonelist' %}"
+                class=" nav-link {% if 'geopolitical_zonelist' in segment %} active {% endif %}">
+                <i class="ni ni-tv-2 text-primary"></i>
+                Geopolitical zone list
               </a>
             </li>
-          </div>
-        </ul>
-      </div>
+
+            <li class="nav-item" id="grade_levels-nav">
+              <a style="cursor:pointer"
+                class=" nav-link {% if 'addgrade_level' in segment %} active {% endif %} {% if 'grade_levellist' in segment %} active {% endif %}"
+                data-toggle="collapse" data-target="#grade_levels-collapse" aria-expanded="true"
+                aria-controls="grade_levels-collapse">
+                <i class="ni ni-tv-2 text-primary"></i>
+                Grade level directory
+              </a>
+            </li>
+            <div id="grade_levels-collapse" style="margin-left: 1rem; background-color: #f9f9f9;" class="collapse"
+              aria-labelledby="grade_levels-nav" data-parent="#accordion">
+              <li class="nav-item">
+                <a href="{% url 'addgrade_level' %}"
+                  class=" nav-link {% if 'addgrade_level' in segment %} active {% endif %}">
+                  <i class="ni ni-tv-2 text-primary"></i>
+                  Add new grade level
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="{% url 'grade_levellist' %}"
+                  class=" nav-link {% if 'grade_levellist' in segment %} active {% endif %}">
+                  <i class="ni ni-tv-2 text-primary"></i>
+                  Grade level list
+                </a>
+              </li>
+
+              <li class="nav-item" id="salary_structures-nav">
+                <a style="cursor:pointer"
+                  class=" nav-link {% if 'addsalary_structure' in segment %} active {% endif %} {% if 'salary_structurelist' in segment %} active {% endif %}"
+                  data-toggle="collapse" data-target="#salary_structures-collapse" aria-expanded="true"
+                  aria-controls="salary_structures-collapse">
+                  <i class="ni ni-tv-2 text-primary"></i>
+                  Salary structure directory
+                </a>
+              </li>
+              <div id="salary_structures-collapse" style="margin-left: 1rem; background-color: #f9f9f9;"
+                class="collapse" aria-labelledby="salary_structures-nav" data-parent="#accordion">
+                <li class="nav-item">
+                  <a href="{% url 'addsalary_structure' %}"
+                    class=" nav-link {% if 'addsalary_structure' in segment %} active {% endif %}">
+                    <i class="ni ni-tv-2 text-primary"></i>
+                    Add new salary structure
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="{% url 'salary_structurelist' %}"
+                    class=" nav-link {% if 'salary_structurelist' in segment %} active {% endif %}">
+                    <i class="ni ni-tv-2 text-primary"></i>
+                    Salary structure list
+                  </a>
+                </li>
+
+                <li class="nav-item" id="state_of_origins-nav">
+                  <a style="cursor:pointer"
+                    class=" nav-link {% if 'addstate_of_origin' in segment %} active {% endif %} {% if 'state_of_originlist' in segment %} active {% endif %}"
+                    data-toggle="collapse" data-target="#state_of_origins-collapse" aria-expanded="true"
+                    aria-controls="state_of_origins-collapse">
+                    <i class="ni ni-tv-2 text-primary"></i>
+                    States directory
+                  </a>
+                </li>
+                <div id="state_of_origins-collapse" style="margin-left: 1rem; background-color: #f9f9f9;"
+                  class="collapse" aria-labelledby="state_of_origins-nav" data-parent="#accordion">
+                  <li class="nav-item">
+                    <a href="{% url 'addstate_of_origin' %}"
+                      class=" nav-link {% if 'addstate_of_origin' in segment %} active {% endif %}">
+                      <i class="ni ni-tv-2 text-primary"></i>
+                      Add new state
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{% url 'state_of_originlist' %}"
+                      class=" nav-link {% if 'state_of_originlist' in segment %} active {% endif %}">
+                      <i class="ni ni-tv-2 text-primary"></i>
+                      State list
+                    </a>
+                  </li>
+
+                  <li class="nav-item" id="leavetypes-nav">
+                    <a style="cursor:pointer"
+                      class=" nav-link {% if 'addleavetype' in segment %} active {% endif %} {% if 'leavetypelist' in segment %} active {% endif %}"
+                      data-toggle="collapse" data-target="#leavetypes-collapse" aria-expanded="true"
+                      aria-controls="leavetypes-collapse">
+                      <i class="ni ni-tv-2 text-primary"></i>
+                      Leave type directory
+                    </a>
+                  </li>
+                  <div id="leavetypes-collapse" style="margin-left: 1rem; background-color: #f9f9f9;"
+                    class="collapse" aria-labelledby="leavetypes-nav" data-parent="#accordion">
+                    <li class="nav-item">
+                      <a href="{% url 'addleavetype' %}"
+                        class=" nav-link {% if 'addleavetype' in segment %} active {% endif %}">
+                        <i class="ni ni-tv-2 text-primary"></i>
+                        Add new leave types
+                      </a>
+                    </li>
+  
+                    <li class="nav-item">
+                      <a href="{% url 'leavetypelist' %}"
+                        class=" nav-link {% if 'leavetypelist' in segment %} active {% endif %}">
+                        <i class="ni ni-tv-2 text-primary"></i>
+                        Leave type list
+                      </a>
+                    </li>
+
+                    <li class="nav-item" id="terminaltypes-nav">
+                      <a style="cursor:pointer"
+                        class=" nav-link {% if 'addterminaltype' in segment %} active {% endif %} {% if 'terminaltypelist' in segment %} active {% endif %}"
+                        data-toggle="collapse" data-target="#terminaltypes-collapse" aria-expanded="true"
+                        aria-controls="terminaltypes-collapse">
+                        <i class="ni ni-tv-2 text-primary"></i>
+                        Terminal type directory
+                      </a>
+                    </li>
+                    <div id="terminaltypes-collapse" style="margin-left: 1rem; background-color: #f9f9f9;"
+                      class="collapse" aria-labelledby="terminaltypes-nav" data-parent="#accordion">
+                      <li class="nav-item">
+                        <a href="{% url 'addterminaltype' %}"
+                          class=" nav-link {% if 'addterminaltype' in segment %} active {% endif %}">
+                          <i class="ni ni-tv-2 text-primary"></i>
+                          Add new terminal types
+                        </a>
+                      </li>
+    
+                      <li class="nav-item">
+                        <a href="{% url 'terminaltypelist' %}"
+                          class=" nav-link {% if 'terminaltypelist' in segment %} active {% endif %}">
+                          <i class="ni ni-tv-2 text-primary"></i>
+                          Terminal type list
+                        </a>
+                      </li>
+
+                </div>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>

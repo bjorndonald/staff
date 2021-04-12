@@ -30,7 +30,7 @@ class Geopolitical_Zone(models.Model):
 
 class State_Of_Origin(models.Model):
     state_name = models.CharField(max_length=800)
-    LGA = models.CharField(max_length=800)
+
     class Meta:
         verbose_name_plural = 'States of origin'
     def __str__(self):
@@ -63,13 +63,6 @@ class Step(models.Model):
     def __str__(self):
         return self.step
 
-#Add  model for location
-#Leave  model
-#Leave status
-#Leave date
-#Leave message
-#Leave created_at and updated_at
-
 class Leave(models.Model):
     status = models.BooleanField(default=False)
     date = models.DateTimeField()
@@ -77,9 +70,14 @@ class Leave(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
 
+class LeaveType(models.Model):
+    name = models.CharField(max_length=400)
+
+class TerminalType(models.Model):
+    name = models.CharField(max_length=400)
+
 class Grade_Level(models.Model):
     grade_level_name = models.CharField(max_length=800)
-
     class Meta:
         verbose_name_plural = 'Grade Levels'
     def __str__(self):

@@ -1,6 +1,35 @@
 from django.contrib import admin
 from .models import *
 
+from django.contrib.auth.models import User, Group
+
+if not Group.objects.filter(name="Hod"):
+	hod = Group()
+	hod.name = "HOD"
+	hod.save()
+elif not Group.objects.filter(name="Staff"):
+	staff = Group()
+	staff.name = "Staff"
+	staff.save()
+# elif not Group.objects.filter(name="Receptionist"):
+# 	receptionist = Group()
+# 	receptionist.name = "Receptionist"
+# 	receptionist.save()
+# elif not Group.objects.filter(name="Admin"):
+# 	admin = Group()
+# 	admin.name = "Admin"
+# 	admin.save()
+# elif not Group.objects.filter(name="ChiefMedical"):
+# 	chief = Group()
+# 	chief.name = "ChiefMedical"
+# 	chief.save()
+
+# adminobj = User.objects.get(username="admin")
+# if not adminobj.groups.all():
+# 	admin_group = Group.objects.get(name='Admin')
+# 	adminobj.groups.add(admin_group)
+
+
 class StaffAdmin(admin.ModelAdmin):
 	list_display = ('staff_name','rank')
 	list_display_links =('staff_name',)

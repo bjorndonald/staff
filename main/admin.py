@@ -3,14 +3,14 @@ from .models import *
 
 from django.contrib.auth.models import User, Group
 
-if not Group.objects.filter(name="Hod"):
-	hod = Group()
-	hod.name = "HOD"
-	hod.save()
-elif not Group.objects.filter(name="Staff"):
-	staff = Group()
-	staff.name = "Staff"
-	staff.save()
+# if not Group.objects.filter(name="Hod"):
+# 	hod = Group()
+# 	hod.name = "HOD"
+# 	hod.save()
+# elif not Group.objects.filter(name="Staff"):
+# 	staff = Group()
+# 	staff.name = "Staff"
+# 	staff.save()
 # elif not Group.objects.filter(name="Receptionist"):
 # 	receptionist = Group()
 # 	receptionist.name = "Receptionist"

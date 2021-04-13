@@ -91,6 +91,14 @@ class Salary_Structure(models.Model):
     def __str__(self):
         return self.salary_structure_name
 
+class Location(models.Model):
+    name = models.CharField(max_length=800)
+
+    class Meta:
+        verbose_name_plural = 'Locations'
+    def __str__(self):
+        return self.name
+
 class Staff(models.Model):
     staff_name = models.CharField(max_length=800)
     date_of_birth=models.DateTimeField()
@@ -109,7 +117,8 @@ class Staff(models.Model):
     geopolitical_zone = models.ForeignKey(
         Geopolitical_Zone, on_delete=models.CASCADE, verbose_name="geopolitical zone")
     address = models.TextField(blank=True, null=True)
-    location = models.TextField(blank=True, null=True)
+    location = models.ForeignKey(
+        Location, on_delete=models.CASCADE, verbose_name="location")
     class Meta:
         verbose_name_plural = 'staff'
     def __str__(self):

@@ -38,6 +38,14 @@ class State_Of_OriginAdmin(admin.ModelAdmin):
 	list_display = ('state_name',)
 	list_display_links =('state_name',)
 
+class LGAAdmin(admin.ModelAdmin):
+	list_display = ('name',)
+	list_display_links =('name',)
+
+class LocationAdmin(admin.ModelAdmin):
+	list_display = ('name',)
+	list_display_links =('name',)
+
 class StepAdmin(admin.ModelAdmin):
 	list_display = ('step',)
 	list_display_links =('step',)
@@ -60,4 +68,6 @@ admin.site.register(State_Of_Origin, State_Of_OriginAdmin)
 admin.site.register(Step, StepAdmin)
 admin.site.register(Grade_Level, Grade_LevelAdmin)
 admin.site.register(Rank, RankAdmin)
+admin.site.register(LGA, LGAAdmin)
+admin.site.register(Location, LocationAdmin)
 admin.site.register(Geopolitical_Zone, Geopolitical_ZoneAdmin)
